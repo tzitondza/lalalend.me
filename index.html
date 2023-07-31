@@ -81,64 +81,6 @@
     </style>
   </head>
 
-  <body>
-    <h1>Coming Soon</h1>
-    <p>We're working hard to bring you something awesome. Stay tuned!</p>
-    <img src="ez.gif" alt="Coming Soon Image" />
-    <div class="countdown">
-      <div class="countdown-item">
-        <span id="days"></span>
-        <span>Days</span>
-      </div>
-      <div class="countdown-item">
-        <span id="hours"></span>
-        <span>Hours</span>
-      </div>
-      <div class="countdown-item">
-        <span id="minutes"></span>
-        <span>Minutes</span>
-      </div>
-      <div class="countdown-item">
-        <span id="seconds"></span>
-        <span>Seconds</span>
-      </div>
-    </div>
-    <script>
-      // Set the date we're counting down to
-      var countDownDate = new Date("June 12, 2023 12:00:00").getTime();
-
-      // Update the countdown every 1 second
-      var x = setInterval(function () {
-        // Get the current time
-        var now = new Date().getTime();
-
-        // Find the distance between now and the countdown date
-        var distance = countDownDate - now;
-
-        // Calculate days, hours, minutes, and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the results in the HTML elements
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-
-        // If the countdown is finished, display a message
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("countdown").innerHTML = "EXPIRED";
-        }
-      }, 1000);
-    </script>
-  </body>
-
-  =======
   <!DOCTYPE html>
   <html>
     <head>
@@ -278,7 +220,5 @@
         }, 1000);
       </script>
     </body>
-
-    >>>>>>> 3ddbf8a67fdb1367a0b96c6957592d65dc58e0b3
   </html>
 </html>
